@@ -27,8 +27,8 @@ public class ListImagesServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // List all of the uploaded files.
-    String projectId = "sminga-sps-summer22";
-    String bucketName = "sminga-sps-summer22.appspot.com";
+    String projectId = "summer22-sps-51";
+    String bucketName = "summer22-sps-51.appspot.com";
     Storage storage = StorageOptions.newBuilder().setProjectId(projectId).build().getService();
     Bucket bucket = storage.get(bucketName);
     Page<Blob> blobs = bucket.list();

@@ -29,7 +29,6 @@ function addRandomGreeting() {
 
 
 // To put the uploaded images back in the webpage
-
 async function image_upload() {
 
   const uploaded_images = await fetch('/list-images', {
