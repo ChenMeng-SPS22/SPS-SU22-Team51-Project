@@ -199,4 +199,17 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -1;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
 }
