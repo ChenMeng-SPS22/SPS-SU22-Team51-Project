@@ -28,7 +28,7 @@
   padding: 0 50px;
 }
 
-/* 'PROJECT NAME HERE' */
+/* 'PROJECT LOGO HERE' */
 #navbar-logo {
   color: white;
   display: flex;
@@ -123,7 +123,7 @@
   }
 
   .navbar__menu.active {
-    background: #ff132d;
+    background: #131313;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
