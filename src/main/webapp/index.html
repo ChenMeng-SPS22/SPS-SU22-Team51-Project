@@ -7,13 +7,41 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
+
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar-logo">PROJECT NAME HERE</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">HOME</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#gallery" class="navbar__links" id="gallery-page">GALLERY</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">ABOUT US</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="#upload" class="button" id="upload-btn">UPLOAD IMAGE</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END NAVBAR SECTION -->
+
+    <!-- <div id="content">
       <h1>My Portfolio</h1>
       <p>This is my portfolio.</p>
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
-    </div>
+    </div> -->
   </body>
 </html>
