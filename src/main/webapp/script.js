@@ -22,6 +22,7 @@
 //   // Pick a random greeting.
 //   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
+
 //   // Add it to the page.
 //   const greetingContainer = document.getElementById('greeting-container');
 //   greetingContainer.innerText = greeting;
@@ -39,3 +40,23 @@ const mobileMenu = () => {
 
 //toggle the div of hamburger menu
 menu.addEventListener('click', mobileMenu);
+
+  // Add it to the page.
+  const greetingContainer = document.getElementById('greeting-container');
+  greetingContainer.innerText = greeting;
+}
+
+
+// To put the uploaded images back in the webpage
+async function image_upload() {
+
+  const uploaded_images = await fetch('/list-images', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(translateParameters)
+  });
+  const images = await uploaded_images.json();
+  
+}
