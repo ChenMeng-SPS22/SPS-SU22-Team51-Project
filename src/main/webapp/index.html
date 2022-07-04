@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
   </head>
   <body>
 
     <!-- NAVBAR SECTION -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="#home" id="navbar-logo">PROJECT NAME HERE</a>
+        <a href="#home" id="navbar-logo">PROJECT LOGO HERE</a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -33,15 +33,47 @@
         </ul>
       </div>
     </nav>
-    <!-- END NAVBAR SECTION -->
+    <!-- script to allow us to click hamburger menu -->
+    <script src="script.js"></script>
+    <!-- END NAVBAR SECTION --> 
 
-    <!-- <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div> -->
+    <!-- HERO SECTION -->
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading">HEADING ONE GOES HERE</h1>
+        <p class="hero__description">PARAGRAPH/DESCRIPTION GOES HERE</p>
+        <video autoplay loop muted id="heroVideo">
+          <source src="assets/video/mountain.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+      <!-- END HERO SECTION -->
+
+      <!-- GALLERY (MAIN) SECTION -->
+      <div class="main" id="gallery">
+        <div class="main__container">
+          <div class="main__img--container">
+            <div class="main__img--card">
+              <!-- insert images here -->
+            </div>
+          </div>
+          <div class="main__content">
+            <h1>GALLERY HEADING HERE</h1>
+            <P>PARAGRAPH/DESCRIPTION HERE</P>
+          </div>
+        </div>
+      </div>
+      <!-- END GALLERY (MAIN) SECTION -->
+
+      <!-- ABOUT US SECTION -->
+      <div class="about" id="about">
+        <h1>ABOUT US</h1>
+        <div class="about__wrapper">
+          <div class="about__card">
+            <h2>ERIC RIVAS</h2>
+            <p>DESCRIPTION HERE</p>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
