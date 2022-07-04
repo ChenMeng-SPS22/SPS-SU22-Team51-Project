@@ -270,3 +270,54 @@
   font-size: 2rem;
   font-weight: 400;
 }
+
+/* ABOUT US SECTION */
+.about {
+  background: #ff132d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.about h1 {
+  color: #fff;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.about__card {
+  margin: 10px;
+  height: 425px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.about__card h2 {
+  text-align: center;
+}
+
+.about__card p {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.about__card:hover {
+  transform: scale(1.075);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
