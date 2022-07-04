@@ -44,7 +44,6 @@ menu.addEventListener('click', mobileMenu);
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
-}
 
 
 // To put the uploaded images back in the webpage
@@ -58,5 +57,16 @@ async function image_upload() {
     body: JSON.stringify(translateParameters)
   });
   const images = await uploaded_images.json();
-  
+
+
+  // code to add image back in the webpage
+  const image_container = document.getElementsByClassName('main__img--container');
+
+  // creating an img element and assinging it the link of the last upload image
+  var img = document.createElement('img');
+  img.src = images[imageslength-1];
+
+  // putting the image back to the webpage
+  image_container.appendChild(img);
+
 }
