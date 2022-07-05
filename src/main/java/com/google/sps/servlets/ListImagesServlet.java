@@ -40,7 +40,8 @@ public class ListImagesServlet extends HttpServlet {
 
     // Adding cloud storage images as <img> html element to the list 
     for(Blob blob : blobs.iterateAll()){
-        String imgTag = String.format("<img src=\"%s\" />", blob.getMediaLink());
+        //String imgTag = String.format("<img src=\"%s\" />", blob.getMediaLink());
+        String imgTag =  blob.getMediaLink();
         images_html.add(imgTag);
     }
 
