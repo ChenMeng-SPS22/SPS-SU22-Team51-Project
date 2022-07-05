@@ -51,13 +51,13 @@ const highlightMenu = () => {
     galleryMenu.classList.remove('highlight')
     return
   }
-  else if(window.innerWidth > 960 && scrollPos < 1400) {
+  else if(window.innerWidth > 960 && scrollPos < 2250) {
     galleryMenu.classList.add('highlight')
     homeMenu.classList.remove('highlight')
     aboutMenu.classList.remove('highlight')
     return
   }
-  else if(window.innerWidth > 960 && scrollPos < 2110) {
+  else if(window.innerWidth > 960 && scrollPos < 4010) {
     aboutMenu.classList.add('highlight')
     galleryMenu.classList.remove('highlight')
     return
@@ -70,14 +70,9 @@ const highlightMenu = () => {
 
 window.addEventListener('scroll', highlightMenu)
 window.addEventListener('click', highlightMenu)
+
 menuLinks.addEventListener('click', hideMobileMenu)
 navLogo.addEventListener('click', hideMobileMenu)
-
-//   // Add it to the page.
-//   const greetingContainer = document.getElementById('greeting-container');
-//   greetingContainer.innerText = greeting;
-// }
-
 
 
 // To put the uploaded images back in the webpage
