@@ -37,11 +37,15 @@ public class ListImagesServlet extends HttpServlet {
     // List to store all the img html tag of the stored images
     List<String> images_html = new ArrayList<String>();
 
-
+    var num = 0;
     // Adding cloud storage images as <img> html element to the list 
     for(Blob blob : blobs.iterateAll()){
-        String imgTag = String.format("<img src=\"%s\" />", blob.getMediaLink());
+        num++;
+        String imgTag = String.format("<figure class= \"gallery__img gallery__img--%s\"> <img src=\"%s\" alt=\"Gallery image %s\" class=\"gallery__img\"> </figure>" , num, blob.getMediaLink(), num);
         images_html.add(imgTag);
+        if(num > 16){
+            num = 0;
+        }
     }
 
     // converting the list to json using gson

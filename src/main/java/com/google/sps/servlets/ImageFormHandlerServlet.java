@@ -35,6 +35,7 @@ public class ImageFormHandlerServlet extends HttpServlet {
 
     uploadToCloudStorage(fileName, fileInputStream);
 
+    response.sendRedirect("https://summer22-sps-51.appspot.com");
   }
 
   /** Uploads a file to Cloud Storage and returns the uploaded file's URL. */
