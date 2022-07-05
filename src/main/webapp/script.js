@@ -62,8 +62,36 @@ async function image_upload() {
   // code to add image back in the webpage
   const image_container = document.getElementsByClassName('main__img--container');
 
+
+  const image_classes =
+      [ 'gallery__item--1',
+      'gallery__item--2' ,'gallery__item--3', 'gallery__item--4', 'gallery__item--5', 'gallery__item--6',
+      'gallery__item--7' ,'gallery__item--8', 'gallery__item--9', 'gallery__item--10', 'gallery__item--11', 
+      'gallery__item--12' ,'gallery__item--13', 'gallery__item--14', 'gallery__item--15', 'gallery__item--16'];
+
+  // Pick a random greeting.
+  // const classes = image_classes[Math.floor(Math.random() * greetings.length)];
+  
+  var num = 0;
+
+  // if(num != 0){
+  //   if(current_class == classes){
+
+  //   }
+  // }
+
+
+  // Add it to the page.
+  //const classContainer = document.getElementById('greeting-container');
+  //greetingContainer.innerText = greeting;
+
+
+
   // creating an img element and assinging it the link of the last upload image
-  var img = document.createElement('img');
+  var img = document.createElement('figure');
+  // adding image class to img element
+  img.classList.add('gallery__item', image_classes[num]);
+  num += 1;
   img.src = images[imageslength-1];
 
   // putting the image back to the webpage

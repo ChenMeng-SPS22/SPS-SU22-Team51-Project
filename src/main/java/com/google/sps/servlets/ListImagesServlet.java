@@ -40,9 +40,11 @@ public class ListImagesServlet extends HttpServlet {
 
     // Adding cloud storage images as <img> html element to the list 
     for(Blob blob : blobs.iterateAll()){
-        //String imgTag = String.format("<img src=\"%s\" />", blob.getMediaLink());
-        String imgTag =  blob.getMediaLink();
+        String imgTag = String.format("<img src=\"%s\" alt=\"Gallery image\" class=\"gallery__img\">", blob.getMediaLink());
+        //String imgTag =  blob.getMediaLink();
         images_html.add(imgTag);
+
+        //<img src="assets/images/test8.jpg" alt="Gallery image 16" class="gallery__img">
     }
 
     // converting the list to json using gson
