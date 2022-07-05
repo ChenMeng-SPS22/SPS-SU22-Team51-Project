@@ -226,6 +226,11 @@
   font-size: 60px;
 }
 
+/* highlight for menu */
+.highlight {
+  border-bottom: 4px solid #13f321;
+}
+
 /* mobile responsiveness for hero section */
 @media screen and (max-width: 768px) {
   .hero__heading {
