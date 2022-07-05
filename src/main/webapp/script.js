@@ -12,25 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-// function addRandomGreeting() {
-//   const greetings =
-//       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-//   // Pick a random greeting.
-//   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-
-//   // Add it to the page.
-//   const greetingContainer = document.getElementById('greeting-container');
-//   greetingContainer.innerText = greeting;
-// }
-
 // variables for hamburger menu
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
+const navLogo = document.querySelector('#navbar__logo')
 
 // Display the hamburger menu
 const mobileMenu = () => {
@@ -57,14 +42,44 @@ const hideMobileMenu = () => {
 }
 
 
+// Show active menu when scrolling
+const highlightMenu = () => {
+  const elem = document.querySelector('.highlight')
+  const homeMenu = document.querySelector('#home-page')
+  const galleryMenu = document.querySelector('#gallery-page')
+  const aboutMenu = document.querySelector('#about-page')
+  let scrollPos = window.scrollY
+  
+
+  // Adds the 'highlight' class to menu items
+  if(window.innerWidth > 960 && scrollPos < 700) {
+    homeMenu.classList.add('highlight')
+    galleryMenu.classList.remove('highlight')
+    return
+  }
+  else if(window.innerWidth > 960 && scrollPos < 2250) {
+    galleryMenu.classList.add('highlight')
+    homeMenu.classList.remove('highlight')
+    aboutMenu.classList.remove('highlight')
+    return
+  }
+  else if(window.innerWidth > 960 && scrollPos < 4010) {
+    aboutMenu.classList.add('highlight')
+    galleryMenu.classList.remove('highlight')
+    return
+  }
+
+  if((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
+    elem.classList.remove('highlight')
+  }
+}
+
+
+window.addEventListener('scroll', highlightMenu)
+window.addEventListener('click', highlightMenu)
+
 menuLinks.addEventListener('click', hideMobileMenu)
 navLogo.addEventListener('click', hideMobileMenu)
-
-//   // Add it to the page.
-//   const greetingContainer = document.getElementById('greeting-container');
-//   greetingContainer.innerText = greeting;
-// }
-
 
 
 // To put the uploaded images back in the webpage
