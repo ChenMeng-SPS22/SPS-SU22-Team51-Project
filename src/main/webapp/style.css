@@ -243,16 +243,15 @@
 }
 
 .main__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
   height: 90%;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0 50px;
+  text-align: center;
+  padding: 30px;
 }
 
 .main__content {
