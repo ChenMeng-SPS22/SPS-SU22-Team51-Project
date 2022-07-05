@@ -41,9 +41,30 @@ const mobileMenu = () => {
 //toggle the div of hamburger menu
 menu.addEventListener('click', mobileMenu);
 
+
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+
+// close hamburger menu when click on item
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector('.is-active')
+
+  if(window.innerWidth <= 768 && menuBars) {
+    menu.classList.toggle('is-active')
+    menuLinks.classList.remove('active')
+  }
+}
+
+
+menuLinks.addEventListener('click', hideMobileMenu)
+navLogo.addEventListener('click', hideMobileMenu)
+
+//   // Add it to the page.
+//   const greetingContainer = document.getElementById('greeting-container');
+//   greetingContainer.innerText = greeting;
+// }
+
 
 
 // To put the uploaded images back in the webpage
