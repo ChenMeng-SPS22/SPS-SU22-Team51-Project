@@ -26,6 +26,11 @@ const mobileMenu = () => {
 //toggle the div of hamburger menu
 menu.addEventListener('click', mobileMenu);
 
+
+  // Add it to the page.
+  const greetingContainer = document.getElementById('greeting-container');
+  greetingContainer.innerText = greeting;
+
 // close hamburger menu when click on item
 const hideMobileMenu = () => {
   const menuBars = document.querySelector('.is-active')
@@ -67,6 +72,7 @@ const highlightMenu = () => {
     elem.classList.remove('highlight')
   }
 }
+
 
 window.addEventListener('scroll', highlightMenu)
 window.addEventListener('click', highlightMenu)
