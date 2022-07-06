@@ -68,6 +68,9 @@ const highlightMenu = () => {
   }
 }
 
+window.onload = function() {
+    image_upload();
+}
 window.addEventListener('scroll', highlightMenu)
 window.addEventListener('click', highlightMenu)
 
