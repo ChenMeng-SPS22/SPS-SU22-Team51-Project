@@ -83,7 +83,18 @@ navLogo.addEventListener('click', hideMobileMenu)
 
 // To put the uploaded images back in the webpage
 async function image_upload() {
-  const uploaded_images = await fetch('/list-images');
+  //const uploaded_images = await fetch('/list-images');
+
+
+  const uploaded_images = await fetch('/list-images' , {
+    method: 'POST', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(value),
+  });
+
+
   const images = await uploaded_images.json();
 
   //Puts them in a container (need to adjust images inside of it using css)
