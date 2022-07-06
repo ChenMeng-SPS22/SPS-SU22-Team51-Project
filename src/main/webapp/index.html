@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="script.js"></script> -->
   </head>
   <body>
 
@@ -33,8 +32,6 @@
         </ul>
       </div>
     </nav>
-    <!-- script to allow us to click hamburger menu -->
-    <script src="script.js"></script>
     <!-- END NAVBAR SECTION --> 
 
     <!-- HERO SECTION -->
@@ -51,15 +48,16 @@
 
       <!-- GALLERY (MAIN) SECTION -->
       <div class="main" id="gallery">
+        <div class="main__content">
+          <h1>GALLERY HEADING HERE</h1>
+          <P>PARAGRAPH/DESCRIPTION HERE</P>
+        </div>
         <div class="main__container">
-          <div class="main__img--container">
-            <div class="main__img--card">
-              <!-- insert images here -->
-            </div>
-          </div>
-          <div class="main__content">
-            <h1>GALLERY HEADING HERE</h1>
-            <P>PARAGRAPH/DESCRIPTION HERE</P>
+          <div class="main__img--container" id = "main__img--container">
+              Here go the images
+            <figure class="gallery__item gallery__item--1">
+              <img src="assets/images/test1.jpg" alt="Gallery image 1" class="gallery__img">
+            </figure>
           </div>
         </div>
       </div>
@@ -70,10 +68,30 @@
         <h1>ABOUT US</h1>
         <div class="about__wrapper">
           <div class="about__card">
+            <img src="assets/images/IMG-7965.jpg" alt="Eric Photo">
             <h2>ERIC RIVAS</h2>
+            <p>DESCRIPTION HERE</p>
+          </div>
+          <div class="about__card">
+            <img src="assets/images/fred.png" alt="Fred Photo">
+            <h2>FRED N</h2>
+            <p>DESCRIPTION HERE</p>
+          </div>
+          <div class="about__card">
+            <img src="assets/images/santi.jpg" alt="Santi Photo">
+            <h2>SANTIAGO MINGA</h2>
             <p>DESCRIPTION HERE</p>
           </div>
         </div>
       </div>
+      <script src="script.js"></script>  
+    <form action="/uploadImage" method="POST" enctype="multipart/form-data">
+        <p>Upload an image:</p>
+        <input type="file" name="image">
+        <br/><br/>
+        <button>Submit</button>
+      </form>
+      <button onclick="image_upload()" >Show images</button>
+
   </body>
 </html>

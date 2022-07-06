@@ -12,25 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-// function addRandomGreeting() {
-//   const greetings =
-//       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-//   // Pick a random greeting.
-//   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-
-//   // Add it to the page.
-//   const greetingContainer = document.getElementById('greeting-container');
-//   greetingContainer.innerText = greeting;
-// }
-
 // variables for hamburger menu
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
+const navLogo = document.querySelector('#navbar__logo')
 
 // Display the hamburger menu
 const mobileMenu = () => {
@@ -41,60 +26,62 @@ const mobileMenu = () => {
 //toggle the div of hamburger menu
 menu.addEventListener('click', mobileMenu);
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+// close hamburger menu when click on item
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector('.is-active')
+
+  if(window.innerWidth <= 768 && menuBars) {
+    menu.classList.toggle('is-active')
+    menuLinks.classList.remove('active')
+  }
+}
+
+// Show active menu when scrolling
+const highlightMenu = () => {
+  const elem = document.querySelector('.highlight')
+  const homeMenu = document.querySelector('#home-page')
+  const galleryMenu = document.querySelector('#gallery-page')
+  const aboutMenu = document.querySelector('#about-page')
+  let scrollPos = window.scrollY
+  
+
+  // Adds the 'highlight' class to menu items
+  if(window.innerWidth > 960 && scrollPos < 700) {
+    homeMenu.classList.add('highlight')
+    galleryMenu.classList.remove('highlight')
+    return
+  }
+  else if(window.innerWidth > 960 && scrollPos < 2250) {
+    galleryMenu.classList.add('highlight')
+    homeMenu.classList.remove('highlight')
+    aboutMenu.classList.remove('highlight')
+    return
+  }
+  else if(window.innerWidth > 960 && scrollPos < 4010) {
+    aboutMenu.classList.add('highlight')
+    galleryMenu.classList.remove('highlight')
+    return
+  }
+
+  if((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
+    elem.classList.remove('highlight')
+  }
+}
+
+window.addEventListener('scroll', highlightMenu)
+window.addEventListener('click', highlightMenu)
+
+menuLinks.addEventListener('click', hideMobileMenu)
+navLogo.addEventListener('click', hideMobileMenu)
 
 
 // To put the uploaded images back in the webpage
 async function image_upload() {
-
-  const uploaded_images = await fetch('/list-images', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(translateParameters)
-  });
+  const uploaded_images = await fetch('/list-images');
   const images = await uploaded_images.json();
 
-
-  // code to add image back in the webpage
-  const image_container = document.getElementsByClassName('main__img--container');
-
-
-  const image_classes =
-      [ 'gallery__item--1',
-      'gallery__item--2' ,'gallery__item--3', 'gallery__item--4', 'gallery__item--5', 'gallery__item--6',
-      'gallery__item--7' ,'gallery__item--8', 'gallery__item--9', 'gallery__item--10', 'gallery__item--11', 
-      'gallery__item--12' ,'gallery__item--13', 'gallery__item--14', 'gallery__item--15', 'gallery__item--16'];
-
-  // Pick a random greeting.
-  // const classes = image_classes[Math.floor(Math.random() * greetings.length)];
-  
-  var num = 0;
-
-  // if(num != 0){
-  //   if(current_class == classes){
-
-  //   }
-  // }
-
-
-  // Add it to the page.
-  //const classContainer = document.getElementById('greeting-container');
-  //greetingContainer.innerText = greeting;
-
-
-
-  // creating an img element and assinging it the link of the last upload image
-  var img = document.createElement('figure');
-  // adding image class to img element
-  img.classList.add('gallery__item', image_classes[num]);
-  num += 1;
-  img.src = images[imageslength-1];
-
-  // putting the image back to the webpage
-  image_container.appendChild(img);
-
+  //Puts them in a container (need to adjust images inside of it using css)
+  const dashboard = document.getElementById('main__img--container'); 
+  dashboard.innerText = "";
+  dashboard.innerHTML = images;
 }
