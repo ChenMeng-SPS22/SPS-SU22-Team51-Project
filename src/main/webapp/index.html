@@ -84,14 +84,22 @@
           </div>
         </div>
       </div>
-      <script src="script.js"></script>  
-    <form action="/uploadImage" method="POST" enctype="multipart/form-data">
-        <p>Upload an image:</p>
-        <input type="file" name="image">
-        <br/><br/>
-        <button>Submit</button>
-      </form>
-      <button onclick="image_upload()" >Show images</button>
+      <!-- END ABOUT US SECTION -->
 
+      <div class="upload" id="upload">
+        <h1>UPLOAD IMAGE</h1>
+        <div class="upload__container">
+          <div class="upload__content">
+            <form action="/uploadImage" method="POST" enctype="multipart/form-data">
+              <p>CAPTION/DESCRIPTION HERE</p>
+              <input type="file" name="image">
+              <!-- <input type="button" name="image" class="submit__btn"> -->
+              <br/><br/>
+              <button class="submit__btn" id="submit__btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="script.js"></script>  
   </body>
 </html>
