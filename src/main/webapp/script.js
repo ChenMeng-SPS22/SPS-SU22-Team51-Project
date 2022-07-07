@@ -28,8 +28,8 @@ menu.addEventListener('click', mobileMenu);
 
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  // const greetingContainer = document.getElementById('greeting-container');
+  // greetingContainer.innerText = greeting;
 
 // close hamburger menu when click on item
 const hideMobileMenu = () => {
