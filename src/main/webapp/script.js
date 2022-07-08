@@ -26,6 +26,11 @@ const mobileMenu = () => {
 //toggle the div of hamburger menu
 menu.addEventListener('click', mobileMenu);
 
+
+  // Add it to the page.
+  // const greetingContainer = document.getElementById('greeting-container');
+  // greetingContainer.innerText = greeting;
+
 // close hamburger menu when click on item
 const hideMobileMenu = () => {
   const menuBars = document.querySelector('.is-active')
@@ -68,9 +73,11 @@ const highlightMenu = () => {
   }
 }
 
+
 window.onload = function() {
     image_upload();
 }
+
 window.addEventListener('scroll', highlightMenu)
 window.addEventListener('click', highlightMenu)
 
@@ -80,7 +87,18 @@ navLogo.addEventListener('click', hideMobileMenu)
 
 // To put the uploaded images back in the webpage
 async function image_upload() {
-  const uploaded_images = await fetch('/list-images');
+  //const uploaded_images = await fetch('/list-images');
+
+
+  const uploaded_images = await fetch('/list-images' , {
+    method: 'POST', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(value),
+  });
+
+
   const images = await uploaded_images.json();
 
   //Puts them in a container (need to adjust images inside of it using css)
