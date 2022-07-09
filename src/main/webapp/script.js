@@ -90,13 +90,14 @@ async function image_upload() {
   //const uploaded_images = await fetch('/list-images');
 
 
-  const uploaded_images = await fetch('/list-images' , {
-    method: 'POST', // or 'PUT'
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(value),
-  });
+  const uploaded_images = await fetch('/list-images'); 
+  // , {
+  //   method: 'POST', // or 'PUT'
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(value),
+  // });
 
 
   const images = await uploaded_images.json();
@@ -104,5 +105,5 @@ async function image_upload() {
   //Puts them in a container (need to adjust images inside of it using css)
   const dashboard = document.getElementById('main__img--container'); 
   dashboard.innerText = "";
-  dashboard.innerHTML = images;
+  dashboard.innerHTML = images[images.length-1];
 }
