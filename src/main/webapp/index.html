@@ -37,8 +37,8 @@
     <!-- HERO SECTION -->
     <div class="hero" id="home">
       <div class="hero__container">
-        <h1 class="hero__heading">HEADING ONE GOES HERE</h1>
-        <p class="hero__description">PARAGRAPH/DESCRIPTION GOES HERE</p>
+        <h1 class="hero__heading">Welcome to our page</h1>
+        <p class="hero__description">Have you ever wondered what kind of wildlife surrounds you? Let's have a look</p>
         <video autoplay loop muted id="heroVideo">
           <source src="assets/video/mountain.mp4" type="video/mp4">
         </video>
@@ -49,8 +49,8 @@
       <!-- GALLERY (MAIN) SECTION -->
       <div class="main" id="gallery">
         <div class="main__content">
-          <h1>GALLERY HEADING HERE</h1>
-          <P>PARAGRAPH/DESCRIPTION HERE</P>
+          <h1>Your submissions</h1>
+          <P>Submit any kind of animal picture you'd like to share with us</P>
         </div>
         <div class="main__container">
           <div class="main__img--container" id = "main__img--container">
@@ -78,9 +78,14 @@
             <p>DESCRIPTION HERE</p>
           </div>
           <div class="about__card">
+            <br/>
             <img src="assets/images/santi.jpg" alt="Santi Photo">
             <h2>SANTIAGO MINGA</h2>
-            <p>DESCRIPTION HERE</p>
+            <p>Hi everyone! I'm a 19 years old Computer Science student down at Tecnologico de Monterrey,
+             city where I currently live in. During this project, I mainly worked on backend features and on some of the communication with the frontend
+              as well, such as uploading and showing images from the server, where I think I
+              accomplished a result I can be proud of.
+             </p>
           </div>
         </div>
       </div>
@@ -91,9 +96,15 @@
         <div class="upload__container">
           <div class="upload__content">
             <form action="/uploadImage" method="POST" enctype="multipart/form-data">
-              <p>CAPTION/DESCRIPTION HERE</p>
-              <input type="file" name="image">
-              <!-- <input type="button" name="image" class="submit__btn"> -->
+              <p>Post an animal picture!</p>
+              <br/><br/>
+              <label for="file-upload" class="submit__btn" >
+                Upload
+              </label>
+              <input id="file-upload" type="file" name="image">
+              <!-- Add label and hide input type="file" for styling,
+                as the following solution gives and unwanted result:
+                  <input type="button" name="image" class="submit__btn">  -->
               <br/><br/>
               <button class="submit__btn" id="submit__btn">Submit</button>
             </form>
