@@ -490,15 +490,13 @@
 }
 
 .upload__container {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   height: 90%;
   width: 100%;
   max-width: 1300px;
-  margin: 0 200px;
-  padding: 0 10px;
 }
 
 .upload__content {
@@ -535,8 +533,6 @@ form {
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
-  height: 100%;
-  width: 30%;
   border: 1px solid #ff132d;
   border-radius: 4px;
   cursor: pointer;
@@ -546,4 +542,8 @@ form {
   background: #fff;
   color: #ff132d;
   transition: all 0.3s ease-in;
+}
+
+input[type="file"] {
+    display: none;
 }
