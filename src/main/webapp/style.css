@@ -396,6 +396,32 @@
   padding: 30px;
 }
 
+/* Prev and Next Buttons */
+.main__container a {
+  text-decoration: none;
+  color: white;
+  background: #dc3545;
+  padding: 7px 10px;
+  border-radius: 4px;  
+  font-size: 19px;
+}
+
+/* prev button */
+/* .main .main__container .prev {
+  display:inline;
+  float:left;
+  margin-left:-200px;
+  text-decoration:none;
+} */
+
+/* next button */
+/* .main .main__container .next {
+  display:inline;
+  float:left;
+  margin-right:-200px;
+  text-decoration:none;
+} */
+
 .main__content {
   color: #fff;
   width: 100%;
