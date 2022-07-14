@@ -547,3 +547,11 @@ form {
 input[type="file"] {
     display: none;
 }
+
+
+/* map style from walkthrough to be changed */
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
+}
