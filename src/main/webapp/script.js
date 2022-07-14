@@ -73,7 +73,7 @@ const highlightMenu = () => {
   }
 }
 
-
+// Load images on window load
 window.onload = function() {
     image_upload();
 }
@@ -96,3 +96,5 @@ async function image_upload() {
     dashboard.innerHTML += images[index]; 
   }
 }
+
+
