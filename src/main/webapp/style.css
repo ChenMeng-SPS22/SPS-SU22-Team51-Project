@@ -468,7 +468,7 @@
 
 .about__card {
   margin: 10px;
-  height: 425px;
+  height: auto;
   width: 300px;
   border-radius: 4px;
   display: flex;
