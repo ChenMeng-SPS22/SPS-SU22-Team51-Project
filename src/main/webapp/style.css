@@ -208,12 +208,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  margin: 25px auto;
   height: 90%;
   text-align: center;
   /* padding: 30px; */
-  padding: 215px;
+  padding: 350px;
 }
 
 .hero__heading {
