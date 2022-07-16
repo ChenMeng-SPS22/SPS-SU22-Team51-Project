@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-  background: #131313;
+  background: #9bc1db;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -89,20 +89,20 @@ body {
   padding: 10px 20px;
   height: 100%;
   width: 100%;
-  border: 1px solid #ff132d;
+  border: 1px solid #FFF;
   border-radius: 4px;
 }
 
 /* 'Upload Image' button hover effect */
 .button:hover {
   background: #fff;
-  color: #ff132d;
+  color: #9bc1db;
   transition: all 0.3s ease-in;
 }
 
 /* 'Home,Gallery,About Us' hover effect */
 .navbar__links:hover {
-  color: #ff132d;
+  color: #959b9a;
   transition: all 0.3s ease;
 }
 
@@ -237,7 +237,7 @@ body {
 
 /* highlight for menu */
 .highlight {
-  border-bottom: 4px solid #13f321;
+  border-bottom: 4px solid #5D5C61;
 }
 
 /* mobile responsiveness for hero section */
@@ -253,7 +253,7 @@ body {
 
 /* gallery (main) section */
 .main {
-  background: #131313;
+  background: #528592;
   padding: 10rem 0;
   color: white;
 }
@@ -409,27 +409,34 @@ body {
 .main__container a {
   text-decoration: none;
   color: white;
-  background: #dc3545;
+  background: #528592;
   padding: 7px 10px;
-  border-radius: 4px;  
+  border: 1px solid #FFF;
+  border-radius: 4px;
   font-size: 19px;
 }
 
+.main__container a:hover {
+  background: #fff;
+  color: #528592;
+  transition: all 0.3s ease-in;
+}
+
 /* prev button */
-/* .main .main__container .prev {
+.main .main__container .prev {
   display:inline;
   float:left;
   margin-left:-200px;
   text-decoration:none;
-} */
+}
 
 /* next button */
-/* .main .main__container .next {
+.main .main__container .next {
   display:inline;
   float:left;
   margin-right:-200px;
   text-decoration:none;
-} */
+}
 
 .main__content {
   color: #fff;
@@ -453,7 +460,7 @@ body {
 
 /* ABOUT US SECTION */
 .about {
-  background: #ff132d;
+  background: #5695a5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -568,14 +575,14 @@ form {
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #ff132d;
+  border: 1px solid #FFF;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .submit__btn:hover {
   background: #fff;
-  color: #ff132d;
+  color: #131313;
   transition: all 0.3s ease-in;
 }
 
