@@ -92,6 +92,11 @@
   transition: all 0.3s ease-in;
 }
 
+.button:disabled {
+    background: #ddd;
+    color: #000;
+}
+
 /* 'Home,Gallery,About Us' hover effect */
 .navbar__links:hover {
   color: #ff132d;
