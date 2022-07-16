@@ -5,6 +5,14 @@
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #E3E2DF;
+  font-size: 1.1rem;
+  color: #000;
+  transition: all 1.1s ease-in-out;
+}
+
 .navbar {
   background: #131313;
   height: 80px;
