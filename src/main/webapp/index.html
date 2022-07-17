@@ -96,6 +96,7 @@
       </div>
       <!-- END ABOUT US SECTION -->
 
+
       <div class="upload" id="upload">
         <h1>UPLOAD IMAGE</h1>
         <div class="upload__container">
@@ -114,7 +115,36 @@
             </form>
           </div>
         </div>
-      </div>
+       </div>
+
+       <!-- <div>
+         <button id="location-button"> Share Location </button>
+       </div> -->
       <script src="script.js"></script>  
+
+      <!--For location button-->
+      <!-- <script>
+          document.getElementById('location-button').click(function(){
+              if(navigator.geoloaction)
+                navigator.geoloaction.getCurrentPosition(function(){
+                    console.log(position);
+                });
+              else 
+                console.log("geoloaction not suppotered");
+          });
+      </script> -->
+
+
+      <script>
+        const Success = (position) => {
+            console.log(position);
+        };
+    
+        const Unsuccess = (error) => {
+            console.error(error);
+        };
+    
+        navigator.geolocation.getCurrentPosition(Success, Unsuccess);
+      </script> 
   </body>
 </html>
