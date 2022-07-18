@@ -100,34 +100,12 @@ async function image_upload() {
 
 
 
-// var long =0;
-// var lati =0;
-
-const Success = (position) => {
-    console.log(position.coords.lattitude);
-};
-
-const Unsuccess = (error) => {
-    console.error(error);
-};
-
-navigator.geolocation.getCurrentPosition(Success, Unsuccess);
-
-// function getLocation(){
-//     if(navigator.geolocation){
-//         navigator.getLocation.getCurrentPosition(getPosition);
-//     }else {
-//         console.log("geolocation not suppoter");
-//     }
-// }
-
 
 // Working on the map
 function createMap() {
   const map = new google.maps.Map(
       document.getElementById('map'),
       // work on centering it where the user is located
-    //   {center: {lat: getPosition.lati, lng: getPosition.long}, zoom: 16, mapTypeId: "satellite",
       {center: {lat: 37.422, lng: -122.084}, zoom: 16, mapTypeId: "satellite",
     });
 
@@ -143,19 +121,14 @@ function createMap() {
         map: map,
        title: 'HelloWorld'
       });
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            map.setCenter(initialLocation);
+        });
+    }
 }
 
-
-
-
-// const Success = (position) => {
-//     console.log(position);
-// };
-
-// const Unsuccess = (error) => {
-//     console.error(error);
-// };
-
-// navigator.geolocation.getCurrentPosition(Success, Unsuccess);
 
 
