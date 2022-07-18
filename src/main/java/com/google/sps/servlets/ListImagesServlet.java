@@ -69,10 +69,10 @@ public class ListImagesServlet extends HttpServlet {
     for(Task task : tasks){
         num++;
         String imgTag = 
-        String.format("<figure class= \"gallery__img gallery__img--%s\" title=\"%s\">" + 
-        "<img src=\"%s\" alt=\"Gallery image %s\" class=\"gallery__img\">" +
+        String.format("<figure class= \"gallery__img gallery__img--%s\" title=\"%s\" onclick= \"changeDescription(\'%s\', this.title);\">" + 
+        "<a href=\"#popup1\"> <img src=\"%s\" alt=\"Gallery image %s\" class=\"gallery__img\"> </a>" +
         "</figure>",
-         num, task.getDescription(), task.getImage(), num);
+         num, task.getDescription(),task.getImage(), task.getImage(), num);
         images_html.add(imgTag);
         if(num > 16){
             num = 0;
