@@ -2,15 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>backyard -- web application</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap" rel="stylesheet">
   </head>
   <body>
 
     <!-- NAVBAR SECTION -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="#home" id="navbar-logo">PROJECT LOGO HERE</a>
+        <a href="#home" id="navbar-logo">backyard</a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -37,8 +38,8 @@
     <!-- HERO SECTION -->
     <div class="hero" id="home">
       <div class="hero__container">
-        <h1 class="hero__heading">Welcome to our page</h1>
-        <p class="hero__description">Have you ever wondered what kind of wildlife surrounds you? Let's have a look</p>
+        <h1 class="hero__heading">backyard</h1>
+        <p class="hero__description">/ˌbakˈyärd/ : the area close to where one lives, or the territory close to a particular country</p>
         <video autoplay loop muted id="heroVideo">
           <source src="assets/video/mountain.mp4" type="video/mp4">
         </video>
@@ -53,7 +54,13 @@
           <P>Submit any kind of animal picture you'd like to share with us</P>
         </div>
         <div class="main__container">
-          <div class="main__img--container" id = "main__img--container"></div>
+          <div class="main__img--container" id = "main__img--container">
+            <!-- images in this div -->
+          </div>
+          <!-- prev button -->
+          <a class="prev" href="#home">&#8249;</a>
+          <!-- next button -->
+          <a class="next" href="#test">&#8250;</a>
         </div>
       </div>
       <!-- END GALLERY (MAIN) SECTION -->
