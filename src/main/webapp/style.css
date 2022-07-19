@@ -100,6 +100,11 @@ body {
   transition: all 0.3s ease-in;
 }
 
+.button:disabled {
+    background: #ddd;
+    color: #000;
+}
+
 /* 'Home,Gallery,About Us' hover effect */
 .navbar__links:hover {
   color: #959b9a;
@@ -588,4 +593,42 @@ form {
 
 input[type="file"] {
     display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup{
+    background:#fff;
+    border-radius: 6px;
+    top:30%;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.popup .description{
+    font-size: medium;
+    color: rgb(37, 37, 37);
+    padding-bottom: 15px;
+}
+.popup .submit__btn{
+    width:100%;
+    padding: 10px 0;
 }

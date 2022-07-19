@@ -52,6 +52,13 @@
         <div class="main__content">
           <h1>Your submissions</h1>
           <P>Submit any kind of animal picture you'd like to share with us</P>
+        <div id = "popup1" class= "overlay" >
+            <div class = "popup">
+                <img id = "imgPP" class="gallery__img" src="data:," alt>
+                <p id="descriptionText" class = "description">Description goes here.</p>
+                <a href="#gallery"><button id = "closebtn" class="submit__btn">Close</button></a>
+            </div>
+        </div>
         </div>
         <div class="main__container">
           <div class="main__img--container" id = "main__img--container">
@@ -104,18 +111,20 @@
         <h1>UPLOAD IMAGE</h1>
         <div class="upload__container">
           <div class="upload__content">
-            <form id="file-upload-form"action="/uploadImage" method="POST" enctype="multipart/form-data">
+            <form id="file-upload-form" action="/uploadImage" method="POST" enctype="multipart/form-data">
               <p>Post an animal picture!</p>
               <br/><br/>
-              <label for="file-upload" class="submit__btn" >
+              <label for="description">Description: </label>
+              <input type="text" id="description" name= "description"> <br/> <br/>
+              <label for="image" class="submit__btn" >
                 Upload
               </label>
-              <input id="file-upload" type="file" name="image" onchange="submit()" >
+              <input id="image" type="file" name="image" onchange="submit()" required>
               <!-- Add label and hide input type="file" for styling,
                 as the following solution gives and unwanted result:
                   <input type="button" name="image" class="submit__btn">  -->
               <br/><br/>
-            </form>
+            </form> 
           </div>
         </div>
       </div>

@@ -97,4 +97,12 @@ async function image_upload() {
   }
 }
 
+function changeDescription(imgSrc, txt){
+    const img = document.getElementById("imgPP");
+    const description = document.getElementById("descriptionText");
+    
+    description.innerText = txt;
+    img.src = imgSrc;
+}
+
 

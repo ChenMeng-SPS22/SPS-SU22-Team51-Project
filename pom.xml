@@ -9,7 +9,7 @@
 
   <properties>
     <!-- Java 11 -->
-    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.source>11</maven.compiler.source> 
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jetty.version>9.4.41.v20210516</jetty.version>
@@ -43,6 +43,18 @@
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-storage</artifactId>
       <version>1.113.0</version>
+    </dependency>
+    <!-- Datastore -->
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-datastore</artifactId>
+      <version>1.104.0</version>
+    </dependency>
+    <!-- jsoup (for whitelisting content) --> 
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.14.2</version>
     </dependency>
   </dependencies>
 
