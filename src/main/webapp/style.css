@@ -595,7 +595,7 @@ input[type="file"] {
     display: none;
 }
 
-<<<<<<< HEAD
+
 
 /* map style from walkthrough to be changed */
 #map {
@@ -603,7 +603,7 @@ input[type="file"] {
   height: 500px;
   width: 500px;
 }
-=======
+
 .overlay {
     position: fixed;
     top: 0;
@@ -641,4 +641,4 @@ input[type="file"] {
     width:100%;
     padding: 10px 0;
 }
->>>>>>> 0097e3ec6cc898cc69b0851d303be2dbe4f6a1c3
+
