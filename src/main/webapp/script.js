@@ -147,17 +147,17 @@ function createMarkerForDisplay(lat, lng) {
         new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
   }
   
-  /** Sends a marker to the backend for saving. */
-  function postMarker() {
+/** Sends a marker to the backend for saving. */
+function postMarker() {
 
-    navigator.geolocation.getCurrentPosition(function (position) {
-        const params = new URLSearchParams();
-        params.append('lat', position.coords.latitude);
-        params.append('lng', position.coords.longitude);
-      
-        fetch('/markers', {method: 'POST', body: params});
-        
-    });
+navigator.geolocation.getCurrentPosition(function (position) {
+    const params = new URLSearchParams();
+    params.append('lat', position.coords.latitude);
+    params.append('lng', position.coords.longitude);
+    
+    fetch('/markers', {method: 'POST', body: params});
+    
+});
 
-  }
+}
 
