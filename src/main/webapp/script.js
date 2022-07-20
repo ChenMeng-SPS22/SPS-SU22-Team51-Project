@@ -114,19 +114,19 @@ function changeDescription(imgSrc, txt){
 
 // Creats map an centers it base on users location
 function createMap() {
-  map = new google.maps.Map(
-      document.getElementById('map'),
-      // work on centering it where the user is located
-      {center: {lat: 37.422, lng: -122.084}, zoom: 16, mapTypeId: "satellite",
+    navigator.geolocation.getCurrentPosition(function (position) {
+        map = new google.maps.Map(
+            document.getElementById('map'),
+            // work on centering it where the user is located
+            {center: {lat: position.coords.latitude, lng: position.coords.longitude}, zoom: 16, mapTypeId: "satellite",
+          });
     });
-
-
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            map.setCenter(initialLocation);
-        });
-    }
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function (position) {
+    //         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    //         map.setCenter(initialLocation);
+    //     });
+    // }
 
     fetchMarkers();
 }
