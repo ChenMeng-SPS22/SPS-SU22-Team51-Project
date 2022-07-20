@@ -119,19 +119,14 @@
             <form id="file-upload-form" action="/uploadImage" method="POST" enctype="multipart/form-data">
               <p>Post an animal picture!</p>
               <br/><br/>
-<<<<<<< HEAD
-              <label for="file-upload" class="submit__btn" onClick="postMarker()">
-                Upload
-              </label>
-              <input id="file-upload" type="file" name="image" onchange="submit()">
-=======
+
               <label for="description">Description: </label>
               <input type="text" id="description" name= "description"> <br/> <br/>
-              <label for="image" class="submit__btn" >
+              <label for="image" class="submit__btn" onClick="postMarker()">
                 Upload
               </label>
               <input id="image" type="file" name="image" onchange="submit()" required>
->>>>>>> 0097e3ec6cc898cc69b0851d303be2dbe4f6a1c3
+
               <!-- Add label and hide input type="file" for styling,
                 as the following solution gives and unwanted result:
                   <input type="button" name="image" class="submit__btn">  -->
