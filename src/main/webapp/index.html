@@ -5,6 +5,7 @@
     <title>backyard -- web application</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHRcq9lBHSxJ2OFnkzrXLzeLB88ISmcng"></script>
   </head>
   <body>
 
@@ -111,10 +112,10 @@
             <form id="file-upload-form"action="/uploadImage" method="POST" enctype="multipart/form-data">
               <p>Post an animal picture!</p>
               <br/><br/>
-              <label for="file-upload" class="submit__btn" >
+              <label for="file-upload" class="submit__btn" onClick="postMarker()">
                 Upload
               </label>
-              <input id="file-upload" type="file" name="image" onchange="submit()" >
+              <input id="file-upload" type="file" name="image" onchange="submit()">
               <!-- Add label and hide input type="file" for styling,
                 as the following solution gives and unwanted result:
                   <input type="button" name="image" class="submit__btn">  -->
