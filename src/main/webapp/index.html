@@ -5,6 +5,7 @@
     <title>backyard -- web application</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHRcq9lBHSxJ2OFnkzrXLzeLB88ISmcng"></script>
   </head>
   <body>
 
@@ -110,6 +111,7 @@
       </div>
       <!-- END ABOUT US SECTION -->
 
+
       <div class="upload" id="upload">
         <h1>UPLOAD IMAGE</h1>
         <div class="upload__container">
@@ -117,12 +119,14 @@
             <form id="file-upload-form" action="/uploadImage" method="POST" enctype="multipart/form-data">
               <p>Post an animal picture!</p>
               <br/><br/>
+
               <label for="description">Description: </label>
               <input type="text" id="description" name= "description"> <br/> <br/>
-              <label for="image" class="submit__btn" >
+              <label for="image" class="submit__btn" onClick="postMarker()">
                 Upload
               </label>
               <input id="image" type="file" name="image" onchange="submit()" required>
+
               <!-- Add label and hide input type="file" for styling,
                 as the following solution gives and unwanted result:
                   <input type="button" name="image" class="submit__btn">  -->
@@ -130,7 +134,36 @@
             </form> 
           </div>
         </div>
-      </div>
+       </div>
+
+       <!-- <div>
+         <button id="location-button"> Share Location </button>
+       </div> -->
       <script src="script.js"></script>  
+
+      <!--For location button-->
+      <!-- <script>
+          document.getElementById('location-button').click(function(){
+              if(navigator.geoloaction)
+                navigator.geoloaction.getCurrentPosition(function(){
+                    console.log(position);
+                });
+              else 
+                console.log("geoloaction not suppotered");
+          });
+      </script> -->
+
+
+      <script>
+        const Success = (position) => {
+            console.log(position);
+        };
+    
+        const Unsuccess = (error) => {
+            console.error(error);
+        };
+    
+        navigator.geolocation.getCurrentPosition(Success, Unsuccess);
+      </script> 
   </body>
 </html>
