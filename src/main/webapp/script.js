@@ -112,6 +112,7 @@ function changeDescription(imgSrc, txt){
 
 
 
+
 // Creats map an centers it base on users location
 function createMap() {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -160,4 +161,5 @@ navigator.geolocation.getCurrentPosition(function (position) {
 });
 
 }
+
 
