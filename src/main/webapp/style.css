@@ -5,8 +5,16 @@
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #E3E2DF;
+  font-size: 1.1rem;
+  color: #000;
+  transition: all 1.1s ease-in-out;
+}
+
 .navbar {
-  background: #131313;
+  background: #9bc1db;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -81,20 +89,25 @@
   padding: 10px 20px;
   height: 100%;
   width: 100%;
-  border: 1px solid #ff132d;
+  border: 1px solid #FFF;
   border-radius: 4px;
 }
 
 /* 'Upload Image' button hover effect */
 .button:hover {
   background: #fff;
-  color: #ff132d;
+  color: #9bc1db;
   transition: all 0.3s ease-in;
+}
+
+.button:disabled {
+    background: #ddd;
+    color: #000;
 }
 
 /* 'Home,Gallery,About Us' hover effect */
 .navbar__links:hover {
-  color: #ff132d;
+  color: #959b9a;
   transition: all 0.3s ease;
 }
 
@@ -208,12 +221,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  margin: 25px auto;
   height: 90%;
   text-align: center;
   /* padding: 30px; */
-  padding: 215px;
+  padding: 350px;
 }
 
 .hero__heading {
@@ -224,11 +237,12 @@
 
 .hero__description {
   font-size: 60px;
+  color: #131313;
 }
 
 /* highlight for menu */
 .highlight {
-  border-bottom: 4px solid #13f321;
+  border-bottom: 4px solid #5D5C61;
 }
 
 /* mobile responsiveness for hero section */
@@ -244,7 +258,7 @@
 
 /* gallery (main) section */
 .main {
-  background: #131313;
+  background: #528592;
   padding: 10rem 0;
   color: white;
 }
@@ -396,6 +410,39 @@
   padding: 30px;
 }
 
+/* Prev and Next Buttons */
+.main__container a {
+  text-decoration: none;
+  color: white;
+  background: #528592;
+  padding: 7px 10px;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  font-size: 19px;
+}
+
+.main__container a:hover {
+  background: #fff;
+  color: #528592;
+  transition: all 0.3s ease-in;
+}
+
+/* prev button */
+.main .main__container .prev {
+  display:inline;
+  float:left;
+  margin-left:-200px;
+  text-decoration:none;
+}
+
+/* next button */
+.main .main__container .next {
+  display:inline;
+  float:left;
+  margin-right:-200px;
+  text-decoration:none;
+}
+
 .main__content {
   color: #fff;
   width: 100%;
@@ -418,7 +465,7 @@
 
 /* ABOUT US SECTION */
 .about {
-  background: #ff132d;
+  background: #5695a5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -441,7 +488,7 @@
 
 .about__card {
   margin: 10px;
-  height: 425px;
+  height: auto;
   width: 300px;
   border-radius: 4px;
   display: flex;
@@ -533,14 +580,14 @@ form {
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #ff132d;
+  border: 1px solid #FFF;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .submit__btn:hover {
   background: #fff;
-  color: #ff132d;
+  color: #131313;
   transition: all 0.3s ease-in;
 }
 
@@ -549,9 +596,49 @@ input[type="file"] {
 }
 
 
+
 /* map style from walkthrough to be changed */
 #map {
   border: thin solid black;
   height: 500px;
   width: 500px;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup{
+    background:#fff;
+    border-radius: 6px;
+    top:30%;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.popup .description{
+    font-size: medium;
+    color: rgb(37, 37, 37);
+    padding-bottom: 15px;
+}
+.popup .submit__btn{
+    width:100%;
+    padding: 10px 0;
+}
+
