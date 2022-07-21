@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hello Google Maps</title>
 
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHRcq9lBHSxJ2OFnkzrXLzeLB88ISmcng"></script>
-   <script src="script.js"></script> 
-  <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Hello Google Maps</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHRcq9lBHSxJ2OFnkzrXLzeLB88ISmcng"></script>
+    <script src="script.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap" rel="stylesheet">
 
 </head>
 <body onload="createMap();">
-  <h1>Hello Google Maps</h1>
-  <div id="map"></div>
-  <p>This page shows a Google Map!</p>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <div class="navbar__container">
+          <a href="#home" id="navbar-logo">backyard</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links" id="home-page">HOME</a>
+            </li>
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links" id="gallery-page">GALLERY</a>
+            </li>
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links" id="about-page">ABOUT US</a>
+            </li>
+            <li class="navbar__item">
+              <a href="map.html" class="navbar__links" id="map-page">MAP</a>
+            </li>
+            <li class="navbar__btn">
+              <a href="index.html" class="button" id="upload-btn">UPLOAD IMAGE</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END NAVBAR SECTION --> 
+
+    <div class="main__content">
+    <h1>Animal Map</h1>
+    <p> Here you will find markers of where cool animals have been spotted near you.</p>
+    <div id="map"></div>
+    <p>Hope you discovered something new &#128513;</p>
+    </div>
+
 </body>
 </html>
