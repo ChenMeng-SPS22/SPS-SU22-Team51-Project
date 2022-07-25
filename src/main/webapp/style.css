@@ -46,6 +46,8 @@ body {
   font-size: 2rem;
 }
 
+
+
 /* Home, Gallery, About Us, Upload Image */
 .navbar__menu {
   display: flex;
@@ -265,8 +267,8 @@ body {
 
 .main__img--container {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-gap: 1.5rem;
 }
 
@@ -410,7 +412,7 @@ body {
   padding: 30px;
 }
 
-/* Prev and Next Buttons */
+/* Prev and Next Buttons
 .main__container a {
   text-decoration: none;
   color: white;
@@ -428,20 +430,20 @@ body {
 }
 
 /* prev button */
-.main .main__container .prev {
+/* .main .main__container .prev {
   display:inline;
   float:left;
   margin-left:-200px;
   text-decoration:none;
-}
+} */
 
 /* next button */
-.main .main__container .next {
+/* .main .main__container .next {
   display:inline;
   float:left;
   margin-right:-200px;
   text-decoration:none;
-}
+} */
 
 .main__content {
   color: #fff;
@@ -538,12 +540,12 @@ body {
 
 .upload__container {
   display: block;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   justify-content: center;
   align-items: center;
   height: 90%;
   width: 100%;
-  max-width: 1300px;
+  /* max-width: 1300px; */
 }
 
 .upload__content {
