@@ -540,12 +540,12 @@ body {
 
 .upload__container {
   display: block;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   justify-content: center;
   align-items: center;
   height: 90%;
   width: 100%;
-  max-width: 1300px;
+  /* max-width: 1300px; */
 }
 
 .upload__content {
