@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
+let map;
+let editMarker;
+
 // variables for hamburger menu
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
@@ -103,6 +107,59 @@ function changeDescription(imgSrc, txt){
     
     description.innerText = txt;
     img.src = imgSrc;
+}
+
+
+
+
+
+// Creats map an centers it base on users location
+function createMap() {
+    navigator.geolocation.getCurrentPosition(function (position) {
+        map = new google.maps.Map(
+            document.getElementById('map'),
+            // work on centering it where the user is located
+            {center: {lat: position.coords.latitude, lng: position.coords.longitude}, zoom: 16, mapTypeId: "satellite",
+          });
+    });
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function (position) {
+    //         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    //         map.setCenter(initialLocation);
+    //     });
+    // }
+
+    fetchMarkers();
+}
+
+
+/** Fetches markers from the backend and adds them to the map. */
+function fetchMarkers() {
+    fetch('/markers').then(response => response.json()).then((markers) => {
+      markers.forEach(
+          (marker) => {
+              createMarkerForDisplay(marker.lat, marker.lng)});
+    });
+  }
+
+/** Creates a marker that shows a read-only info window when clicked. */
+function createMarkerForDisplay(lat, lng) {
+    const marker =
+        new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
+  }
+  
+/** Sends a marker to the backend for saving. */
+function postMarker() {
+
+navigator.geolocation.getCurrentPosition(function (position) {
+    const params = new URLSearchParams();
+    params.append('lat', position.coords.latitude);
+    params.append('lng', position.coords.longitude);
+    
+    fetch('/markers', {method: 'POST', body: params});
+    
+});
+
 }
 
 
