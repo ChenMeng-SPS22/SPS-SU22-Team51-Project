@@ -454,6 +454,15 @@ body {
   margin: 0 auto;
 }
 
+.main__content__map {
+  color: #131313;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .main__content h1 {
   font-size: 3rem;
   margin-bottom: 32px;
