@@ -65,7 +65,7 @@ public class ListImagesServlet extends HttpServlet {
         num++;
         String imgTag = 
         String.format("<figure class= \"gallery__img gallery__img--%s\" title=\"%s\" onclick= \"changeDescription(\'%s\', this.title);\">" + 
-        "<a href=\"#popup1\"> <img src=\"%s\" alt=\"Gallery image %s\" class=\"gallery__img\"> </a>" +
+        "<a style=“border-style:hidden; background: #528592” href=\"#popup1\"> <img src=\"%s\" alt=\"Gallery image %s\" class=\"gallery__img\"> </a>" +
         "</figure>",
          num, task.getDescription(),task.getImage(), task.getImage(), num);
         images_html.add(imgTag);

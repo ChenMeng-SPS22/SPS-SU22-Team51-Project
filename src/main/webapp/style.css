@@ -632,3 +632,7 @@ input[type="file"] {
     width:100%;
     padding: 10px 0;
 }
+#imgPP{
+    height: 200px;
+    width: auto;
+}
